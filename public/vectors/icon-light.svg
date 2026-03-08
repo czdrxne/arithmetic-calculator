@@ -1,0 +1,39 @@
+<svg
+    version="1.1"
+    id="Layer_1"
+    xml:space="preserve"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    viewBox="0 0 501.333 501.333"
+    style="enable-background:new 0 0 501.333 501.333;"
+>
+  
+  <rect style="fill:#ffffff;" width="250.667" height="250.667"/>
+  
+    <rect x="250.667" style="fill:#c0c0c0;" width="250.667" height="250.667"/>
+
+    
+
+    <rect y="250.667" style="fill:#c0c0c0;" width="250.667" height="250.667"/>
+
+    <rect x="250.667" y="250.667" style="fill:#ffffff;" width="250.667" height="250.667"/>
+
+    <g>
+        <rect x="58.667" y="114.133" style="fill:#2e2e2e;" width="133.333" height="22.4"/>
+        <rect x="114.133" y="58.667" style="fill:#2e2e2e;" width="22.4" height="133.333"/>
+      
+        <rect x="309.333" y="114.133" style="fill:#1e1e1e;" width="133.333" height="22.4"/>
+      
+        <g transform="matrix(0.7071 0.7071 -0.7071 0.7071 28.867 1.809)">
+            <rect x="254.408" y="185.18" style="fill:#1e1e1e;" width="157.867" height="22.4"/>
+            <rect x="321.608" y="117.98" style="fill:#1e1e1e;" width="22.4" height="157.867"/>
+        </g>
+      
+        <rect x="309.333" y="364.8" style="fill:#2e2e2e;" width="133.333" height="22.4"/>
+        <rect x="364.8" y="309.333" style="fill:#2e2e2e;" width="22.4" height="22.4"/>
+        <rect x="364.8" y="420.267" style="fill:#2e2e2e;" width="22.4" height="22.4"/>
+    </g>
+
+</svg>
