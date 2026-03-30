@@ -1,0 +1,73 @@
+export function init(value: string, btn: string): string {
+    let newValue = value;
+
+    const buttonMap: Record<string, string> = {
+        "x^": "^",
+        "×": "x",
+    };
+
+    const input = buttonMap[btn] ?? btn;
+
+    switch (btn) {
+        case "AC":
+            return "";
+
+        case "C":
+            return newValue.slice(0, -1);
+
+        case "=":
+            try {
+                let expr = newValue
+                    .replace(/x/g, "*")
+                    .replace(/÷/g, "/")
+                    .replace(/\^/g, "**")
+                    .replace(/(\d|\))\(/g, "$1*(");
+
+                return eval(expr).toString();
+            } catch {
+                return "Error";
+            }
+    }
+
+    if (newValue === "Error") newValue = "";
+
+    const lastChar = newValue.slice(-1);
+    const operators = ["+", "-", "x", "%", "÷"];
+    const openParens = (newValue.match(/\(/g) || []).length;
+    const closeParens = (newValue.match(/\)/g) || []).length;
+
+    const lastNum = newValue.split(/[\+\-x÷%^]/).pop() || "";
+
+    if (input === ".") {
+        if (lastNum.includes(".")) return newValue;
+        if (!lastNum || lastNum === "0") {
+            return newValue + (lastNum === "0" ? "." : "0.");
+        }
+    }
+
+    if (newValue === "0" && lastNum === "0") return newValue;
+
+    if (input === "(") return newValue + "(";
+
+    if (input === ")") {
+        if (
+            openParens > closeParens &&
+            !operators.includes(lastChar) &&
+            lastChar !== "("
+        ) {
+            return newValue + ")";
+        }
+        return newValue;
+    }
+
+    if (
+        newValue === "" &&
+        ["^", "√", "%", "÷", "x", "-", "+"].includes(input) &&
+        input !== "-"
+    ) return newValue;
+
+    if (operators.includes(input) && operators.includes(lastChar))
+        return newValue.slice(0, -1) + input;
+
+    return newValue + input;
+}
