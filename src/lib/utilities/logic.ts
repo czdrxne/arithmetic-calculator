@@ -1,4 +1,4 @@
-export function init(value: string, btn: string): string {
+export function initCalc(value: string, btn: string): string {
     let newValue = value;
 
     const buttonMap: Record<string, string> = {
@@ -17,13 +17,7 @@ export function init(value: string, btn: string): string {
 
         case "=":
             try {
-                let expr = newValue
-                    .replace(/x/g, "*")
-                    .replace(/÷/g, "/")
-                    .replace(/\^/g, "**")
-                    .replace(/(\d|\))\(/g, "$1*(");
-
-                return eval(expr).toString();
+                return evalExpr(newValue);
             } catch {
                 return "Error";
             }
@@ -70,4 +64,34 @@ export function init(value: string, btn: string): string {
         return newValue.slice(0, -1) + input;
 
     return newValue + input;
+}
+
+export function evalExpr(expr: string): string {
+    const safeExpr = expr
+                        .replace(/x/g, "*")
+                        .replace(/÷/g, "/")
+                        .replace(/\^/g, "**")
+                        .replace(/(\d|\))\(/g, "$1*(");
+
+    try {
+        const result = eval(safeExpr);
+        if (result === Infinity || isNaN(result)) return "Error";
+        return result.toString();
+    }
+    catch { return "Error"; }
+}
+
+export function initPreview(expr: string): string {
+    if (!expr) return "";
+
+    expr = expr.replace(/[\+\-x÷^%\.]+$/, "");
+
+    if (!expr) return "";
+
+    try {
+        const result = evalExpr(expr);
+        if (result === "Error") return "";
+        return result;
+    }
+    catch { return ""; }
 }
