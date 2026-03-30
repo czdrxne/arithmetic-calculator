@@ -2,7 +2,7 @@
     import { createEventDispatcher } from "svelte";
 
     const dispatch = createEventDispatcher();
-    const click = (btn: string) => dispatch("press", btn);
+    const handleClick = (btn: string) => dispatch("press", btn);
 
 </script>
 
