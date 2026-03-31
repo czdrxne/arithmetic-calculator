@@ -16,11 +16,8 @@ export function initCalc(value: string, btn: string): string {
             return newValue.slice(0, -1);
 
         case "=":
-            try {
-                return evalExpr(newValue);
-            } catch {
-                return "Error";
-            }
+            try   { return result = evalExpr(newValue); }
+            catch { return "Error";}
     }
 
     if (newValue === "Error") newValue = "";
@@ -33,10 +30,10 @@ export function initCalc(value: string, btn: string): string {
     const lastNum = newValue.split(/[\+\-x÷%^]/).pop() || "";
 
     if (input === ".") {
-        if (lastNum.includes(".")) return newValue;
-        if (!lastNum || lastNum === "0") {
+        if (lastNum.includes("."))
+            return newValue;
+        if (!lastNum || lastNum === "0") 
             return newValue + (lastNum === "0" ? "." : "0.");
-        }
     }
 
     if (newValue === "0" && lastNum === "0") return newValue;
@@ -66,7 +63,7 @@ export function initCalc(value: string, btn: string): string {
     return newValue + input;
 }
 
-export function evalExpr(expr: string): string {
+function evalExpr(expr: string): string {
     const safeExpr = expr
                         .replace(/x/g, "*")
                         .replace(/÷/g, "/")
