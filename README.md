@@ -1,47 +1,111 @@
-# Svelte + TS + Vite
+# ARITHMETIC CALCULATOR
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+Welcome to the official repository of **Arithmetic Calculator** — a simple, modern, and responsive web-based calculator designed for quick and reliable everyday computations. Built with a focus on usability and performance, this project delivers essential functionality without unnecessary complexity.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## 🚀 Overview
 
-## Need an official Svelte framework?
+This is a **fully client-side calculator application** that supports basic arithmetic operations along with helpful features like **real-time result preview** and **calculation history**.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+The application prioritizes **speed, clarity, and responsiveness**, making it suitable for both desktop and mobile users who need a straightforward calculation tool.
 
-## Technical considerations
+---
 
-**Why use this over SvelteKit?**
+## 🌟 Highlights
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+* **Fast and lightweight** – no backend, no delays
+* **Real-time preview** – see results instantly while typing
+* **History support** – review previous calculations easily
+* **Clean interface** – minimal design with dark mode
+* **Responsive layout** – works on all screen sizes
+* **FOSS** – Free & Open Source Software
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+---
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+## ⚡ Features
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+### 🧮 Core Operations
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+* Addition (+)
+* Subtraction (−)
+* Multiplication (×)
+* Division (÷)
+* Percentage (%)
+* Square root (√)
 
-**Why include `.vscode/extensions.json`?**
+### 🔢 Input & Controls
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+* Digits: 0–9
+* Decimal support (.)
+* Parentheses ( )
+* Clear (**C**) and All Clear (**AC**) functions
 
-**Why enable `allowJs` in the TS template?**
+### 👀 Smart Calculation
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+* Live result preview
+* Immediate feedback on expressions
 
-**Why is HMR not preserving my local component state?**
+### 📜 History
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+* Tracks previous calculations
+* Helps verify and revisit results
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+### 🌙 Interface & Experience
 
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+* Dark mode support
+* Clean and intuitive layout
+* Fully responsive design
+
+---
+
+## 🎨 Design Philosophy
+
+* **Minimal & Practical:** Only essential calculator features included
+* **User-Centered:** Easy-to-use layout with clear interactions
+* **Performance-Focused:** Instant input handling and calculations
+* **Responsive First:** Seamless experience across devices
+* **No Bloat:** Lightweight and efficient implementation
+
+---
+
+## 💻 Tech Stack
+
+* **JavaScript** – Core calculation logic
+* **HTML & CSS** – Structure and styling
+* **Responsive Design** – Mobile-first approach
+
+---
+
+## 🔐 Privacy & Security
+
+* **No backend**
+* **No user tracking**
+* **No external services**
+* **No data collection**
+
+All data remains **locally on the user’s device**.
+
+---
+
+## 🆓 License (MIT) & Usage
+
+This project is **Free and Open Source Software (FOSS)**.
+
+* Free to **use**, **modify**, and **distribute**
+* Contributions are welcome
+* Attribution is appreciated
+
+---
+
+## ❤️ Final Notes
+
+This project is built for simplicity and reliability — a no-frills calculator that gets the job done efficiently.
+
+If you find it useful, feel free to ⭐ the repository or build upon it.
+
+<br/>
+
+Thank you for checking out this project! <br/>
+
+***© 2026 CZDRXNE — PROBLEMA EADEM RATIONE SOLVI NON POTEST***
