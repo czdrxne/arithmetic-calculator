@@ -4,26 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/svg+xml" href="/vectors/icon-light.svg" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/svg+xml" href="/vectors/icon-dark.svg" media="(prefers-color-scheme: light)">
-    
+
+    <!-- SEO -->
+
+    <meta name="description" content="Calculator – Free, Fast, Responsive & Modern Online Calculator with History and Real-Time Preview" />
+    <meta name="keywords" content="calculator, online calculator, math calculator, basic calculator, responsive calculator, dark mode calculator, history calculator, fast calculator, FOSS" />
+    <meta name="author" content="Louise Czedrian Laping (czdrxne)" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
     <!-- THEME -->
 
     <meta name="theme-color" content="#1E1E1E" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Calculator" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" href="/vectors/icon-dark.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="/vectors/icon-dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="/vectors/icon-light.svg" media="(prefers-color-scheme: dark)">
+
+    <!-- OPENGRAPH API -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arithmetic-calculator.vercel.app" />
+    <meta property="og:title" content="Calculator – Free, Fast, Responsive & Modern Online Calculator" />
+    <meta property="og:description" content="A fast and responsive online calculator with history, real-time preview, and dark mode." />
+    <meta property="og:image" content="/vectors/icon-dark.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://arithmetic-calculator.vercel.app" />
+    <meta name="twitter:title" content="Calculator – Free, Fast, Responsive & Modern Online Calculator" />
+    <meta name="twitter:description" content="A fast and responsive online calculator with history, real-time preview, and dark mode." />
+    <meta name="twitter:image" content="/vectors/icon-dark.svg" />
 
     <!-- PERFORMANCE -->
 
     <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
     <meta http-equiv="Pragma" content="cache" />
 
-    <title>Calculator</title>
+    <!-- SECURITY -->
 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:;" />
+
+    <title>Arithmetic Calculator – Free, Fast & Responsive Online Calculator</title>
   </head>
-
-  <body style="background: #1E1E1E">
+  <body style="background:#242424">
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
-
 </html>
